@@ -3,6 +3,18 @@ import streamlit as st
 
 st.title("Boardgame Priority Comparator")
 
+
+st.markdown("""
+This is a simple app to compare your Spiel priorities with your friends.  
+
+**Usage:**
+1. Prioritize all the games you care about in the Boardgamegeek Spiel Preview.
+2. Clear all Filters.
+3. Export as CSV.
+4. Gather all CSV files.
+5. Upload them to the app.
+""")
+
 uploaded_files = st.file_uploader("Select all csv files to process", type="csv", accept_multiple_files=True)
 
 if uploaded_files:
