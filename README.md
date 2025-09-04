@@ -7,3 +7,5 @@ This is a simple app to compare you Spiel priorities with your friends. Usage:
 4. Gather all csv files
 5. Upload them to the app
 6. The app will calculate the mean priority for each game and sort them by group desireability (lower = higher priority)
+
+Please note that this is a Streamlit App and needs to deployed to Streamlit.
