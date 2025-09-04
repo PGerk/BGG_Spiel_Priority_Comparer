@@ -10,6 +10,10 @@ if uploaded_files:
     for i, f in enumerate(uploaded_files):
         df = pd.read_csv(f, sep=",", quotechar='"')
         df["Priority"] = pd.to_numeric(df["Priority"], errors="coerce").fillna(5).astype(int)
+        if "Show Price" not in df.columns and "MSRP" in df.columns:
+            df["Show Price"] = df["MSRP"]
+        elif "Show Price" in df.columns:
+            df["Show Price"] = df["Show Price"].fillna(df["MSRP"]) if "MSRP" in df.columns else df["Show Price"]
         df = df[["Title", "Publisher", "Location", "Show Price", "Notes", "Priority"]].copy()
         df.rename(columns={"Priority": f"Priority_{i+1}"}, inplace=True)
         dfs.append(df)
