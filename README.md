@@ -1,19 +1,9 @@
-# 🎈 Blank app template
+# BGG Spiel Priorities Comparer
 
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+This is a simple app to compare you Spiel priorities with your friends. Usage:
+1. Prioritize all the games you care about in the Boardgamegeek Spiel Preview
+2. Clear all Filters
+3. Export as csv
+4. Gather all csv files
+5. Upload them to the app
+6. The app will calculate the mean priority for each game and sort them by group desireability (lower = higher priority)
